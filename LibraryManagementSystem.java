@@ -1,5 +1,5 @@
 import java.util.*;
-
+import java.io.*;
 /**
  * LibraryManagementSystem 클래스의 설명을 작성하세요.
  *
@@ -42,7 +42,7 @@ public class LibraryManagementSystem
      */
     public <T> void printDB(LibDB<T> db)
     {
-        db.printAllElements;
+        db.printAllElements();
     }
 
     /**
@@ -70,8 +70,70 @@ public class LibraryManagementSystem
      */
     public LibDB<Book> setBookDB(String bookFile)
     {
-        // 여기에 코드를 작성하세요
-        return y;
+        Scanner scan = new Scanner(System.in);
+        FileReader fout = null;
+        int c;
+        try{
+            fout = new FileReader(bookFile);
+            while(true){
+                String line = scan.nextLine();
+                StringTokenizer stz = new StringTokenizer(line, "/");
+                String[] bookIf = new String[stz.countTokens()];
+                
+                for(int i = 0; stz.hasMoreTokens(); i++){
+                    String tok = stz.nextToken();
+                    bookIf[i] = tok;
+                }
+                
+                Book bookObj = new Book(bookIf[0], bookIf[1], bookIf[2], bookIf[3], Integer.valueOf(bookIf[4]));
+                
+                if(line.length() == 0)
+                    break;
+            }
+            fout.close();
+        }
+        catch(IOException e){
+            System.out.println("입출력 오류");
+        }
+        scan.close();
+        return bookObj;
+    }
+
+    /**
+     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     *
+     * @param  y  메소드의 샘플 파라미터
+     * @return    x 와 y의 합
+     */
+    public LibDB<User> setUserDB(String userFile)
+    {
+        Scanner scan = new Scanner(System.in);
+        FileReader fout = null;
+        int c;
+        try{
+            fout = new FileReader(userFile);
+            for(int i = 0; true; i++){
+                String line = scan.nextLine();
+                StringTokenizer stz = new StringTokenizer(line, "/");
+                String[] userIf = new String[stz.countTokens()];
+                
+                for(int i = 0; stz.hasMoreTokens();i++){
+                    String tok = stz.nextToken();
+                    userIf[j] = tok;
+                }
+                
+                User userObj = new User(userIf[0], Integer.valueOf(userIf[1]));
+                
+                if(line.length() == 0)
+                    break;
+            }
+            fout.close();
+        }
+        catch(IOException e){
+            System.out.println("입출력 오류");
+        }
+        scan.close();
+        return userObj;
     }
 
 }
