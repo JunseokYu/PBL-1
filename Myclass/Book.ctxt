@@ -1,10 +1,13 @@
 #BlueJ class context
 comment0.target=Book
-comment0.text=\n\ Book\ \uD074\uB798\uC2A4\uC758\ \uC124\uBA85\uC744\ \uC791\uC131\uD558\uC138\uC694.\n\n\ @author\ (\uC791\uC131\uC790\ \uC774\uB984)\n\ @version\ (\uBC84\uC804\ \uBC88\uD638\ \uB610\uB294\ \uC791\uC131\uD55C\ \uB0A0\uC9DC)\n
-comment1.params=
-comment1.target=Book()
+comment0.text=\n\ Book\uD074\uB798\uC2A4\uB294\ \u0008\u0008\uCC45\ \uAC1D\uCCB4\uB97C\ \uC0DD\uC131\uD558\uB294\ \uD074\uB798\uC2A4.\n\n\ @author\ (2022320026\u0008\ \uC720\uC900\uC11D,\ 2022320014\ \uC815\uC7AC\uD5CC,\ 2022320018\ \u0008\uC774\uC131\uBBFC)\n\ @version\ (2025.09.17)\n
+comment1.params=BookID\ title\ author\ publisher\ year
+comment1.target=Book(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String,\ int)
 comment1.text=\n\ Book\ \uD074\uB798\uC2A4\uC758\ \uAC1D\uCCB4\ \uC0DD\uC131\uC790\n
-comment2.params=y
-comment2.target=int\ sampleMethod(int)
-comment2.text=\n\ \uC608\uC81C\ \uBA54\uC18C\uB4DC\ -\ \uC774\ \uC8FC\uC11D\uC744\ \uC0AC\uC6A9\uC790\uC5D0\ \uB9DE\uAC8C\ \uBC14\uAFB8\uC2ED\uC2DC\uC624\n\n\ @param\ \ y\ \ \uBA54\uC18C\uB4DC\uC758\ \uC0D8\uD50C\ \uD30C\uB77C\uBBF8\uD130\n\ @return\ \ \ \ x\ \uB354\uD558\uAE30\ y\uC758\ \uACB0\uACFC\uAC12\uC744\ \uBC18\uD658\n
-numComments=3
+comment2.params=
+comment2.target=java.lang.String\ getID()
+comment2.text=\n\ BookID\uB97C\ \uB9AC\uD134\uD558\uB294\ \u0008\uBA54\uC18C\uB4DC\n
+comment3.params=
+comment3.target=java.lang.String\ toString()
+comment3.text=\n\ \uC0C1\uC704\ \uD074\uB798\uC2A4\uC778\ \u0008object\ \uD074\uB798\uC2A4\uC5D0\ \uC624\uBC84\uB77C\uC774\uB529\uD558\uB294\ \uD074\uB798\uC2A4.\ \u0008(\uBB38\uC790\uC5F4\ \uBC18\uD658)\n
+numComments=4

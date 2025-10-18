@@ -1,35 +1,40 @@
 package Myclass;
 
-
 /**
- * Book 클래스의 설명을 작성하세요.
+ * Book클래스는 책 객체를 생성하는 클래스.
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author (2022320026 유준석, 2022320014 정재헌, 2022320018 이성민)
+ * @version (2025.09.17)
  */
 public class Book extends DB_Element
 {
-    // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
-    private int y;
+    private String title;
+    private String publisher;
+    private String author;
+    private String BookID;
+    private int year;
 
     /**
      * Book 클래스의 객체 생성자
      */
-    public Book()
-    {
-        // 인스턴스 변수 초기화
-        y = 0;
+    public Book(String BookID,String title,String author,String publisher,int year){
+        this.author = author;
+        this.BookID = BookID;
+        this.publisher = publisher;
+        this.title = title;
+        this.year = year;
     }
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * BookID를 리턴하는 메소드
      */
-    public int sampleMethod(int y)
-    {
-        // 여기에 코드를 작성하세요.
-        return x + y;
+    public String getID(){
+        return this.BookID;
+    }
+    /**
+     * 상위 클래스인 object 클래스에 오버라이딩하는 클래스. (문자열 반환)
+     */
+    public String toString(){
+        return "("+this.BookID+")  "+this.title+",  "+this.author+",  "+this.publisher+",  "+this.year;
     }
 }
