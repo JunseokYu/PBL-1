@@ -54,7 +54,24 @@ public class LibraryManagementSystem
     public void printLoanList()
     {
         Set<User> Keys = loanDB.keySet();
-        Iterator<>
+        Iterator<User> it = keys.iterator();
+        while(it.hasNext()){
+            User userObj = it.next();
+            Book bookObj = loanDB.get(userObj);
+            System.out.println(userObj + " ===> " + bookObj);
+        }
+    }
+
+    /**
+     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
+     *
+     * @param  y  메소드의 샘플 파라미터
+     * @return    x 와 y의 합
+     */
+    public LibDB<Book> setBookDB(String bookFile)
+    {
+        // 여기에 코드를 작성하세요
+        return y;
     }
 
 }
