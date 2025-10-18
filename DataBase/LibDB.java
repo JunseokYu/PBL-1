@@ -21,15 +21,9 @@ public class LibDB<T> {
     public T findElement(String s) {
         Iterator<T> it = db.iterator();
         while (it.hasNext()) {
-            T element = it.next();
-            if (element instanceof Book) {
-                if (((Book) element).getID().equals(s)) {
-                    return element;
-                }
-            } else if (element instanceof User) {
-                if (((User) element).getID().equals(s)) {
-                    return element;
-                }
+            T obj = it.next();
+            if(obj.toString().contains(s)){
+                return obj;
             }
         }
         return null;
