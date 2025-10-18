@@ -1,3 +1,4 @@
+import java.util.*;
 
 /**
  * LibraryManagementSystem 클래스의 설명을 작성하세요.
@@ -8,9 +9,9 @@
 public class LibraryManagementSystem
 {
     // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
-    LibDB<Book> LibDB<Book>;
+    LibDB<Book> bookDB;
     HashMap<User, Book> loanDB;
-    LibDB<user> userDB;
+    LibDB<Set> userDB;
 
     /**
      * LibraryManagementSystem 클래스의 객체 생성자
