@@ -24,11 +24,10 @@ public class User extends DB_Element
     }
 
     /**
-     * getID를 언박싱해 리턴하는 메소드
+     * getID를 Wrapper클래스에 Integer형을 문자열로 오토박싱해 리턴하는 메소드
      */
     public String getID(){
-        int stid = stID;    
-        return Integer.toString(stid);
+        return  stID.toString();
     }
 
     /**
