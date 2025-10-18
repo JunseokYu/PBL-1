@@ -1,5 +1,7 @@
 import java.util.*;
 import java.io.*;
+import myClass.*;
+
 /**
  * LibraryManagementSystem 클래스의 설명을 작성하세요.
  *
@@ -18,7 +20,7 @@ public class LibraryManagementSystem
      */
     public LibraryManagementSystem()
     {
-        this.bookDB = new LibDb<Book>();
+        this.bookDB = new LibDB<Book>();
         this.userDB = new LibDB<User>();
         this.loanDB = new HashMap<User, Book>();
     }
@@ -53,7 +55,7 @@ public class LibraryManagementSystem
      */
     public void printLoanList()
     {
-        Set<User> Keys = loanDB.keySet();
+        Set<User> keys = loanDB.keySet();
         Iterator<User> it = keys.iterator();
         while(it.hasNext()){
             User userObj = it.next();
@@ -70,11 +72,8 @@ public class LibraryManagementSystem
      */
     public LibDB<Book> setBookDB(String bookFile)
     {
-        Scanner scan = new Scanner(System.in);
-        FileReader fout = null;
-        int c;
         try{
-            fout = new FileReader(bookFile);
+            Scanner scan = new Scanner(new FileReader(bookFile));
             while(true){
                 String line = scan.nextLine();
                 StringTokenizer stz = new StringTokenizer(line, "/");
@@ -90,16 +89,20 @@ public class LibraryManagementSystem
                 if(line.length() == 0)
                     break;
             }
-            fout.close();
         }
         catch(IOException e){
             System.out.println("입출력 오류");
         }
-        scan.close();
+        finally{
+            if(scan != null)
+                scan.close();
+            }
+        }
+        bookDB.add(bookObj);
         return bookObj;
     }
 
-    /**
+     /**
      * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
      *
      * @param  y  메소드의 샘플 파라미터
@@ -119,7 +122,7 @@ public class LibraryManagementSystem
                 
                 for(int i = 0; stz.hasMoreTokens();i++){
                     String tok = stz.nextToken();
-                    userIf[j] = tok;
+                    userIf[i] = tok;
                 }
                 
                 User userObj = new User(userIf[0], Integer.valueOf(userIf[1]));

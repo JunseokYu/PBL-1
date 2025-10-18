@@ -9,9 +9,9 @@ public class App
 {
     public static void main(String[] args){
         //1. LibraryManagementSystem 객체 생성
-        LibraryManagementSystem lms = new LibraryManagementSystem; 
+        LibraryManagementSystem lms = new LibraryManagementSystem(); 
         //2.이용자 정보 등록
-        libDB<userDB> userDB = lms.setuserDB("C:\\Temp\\UserData2025.txt");
+        libDB<UserDB> userDB = lms.setUserDB("C:\\Temp\\UserData2025.txt");
         //3.이용자 정보 출력
         System.out.println("----- 이용자 정보 출력 -----");
         libDB.printDB(userDB);
