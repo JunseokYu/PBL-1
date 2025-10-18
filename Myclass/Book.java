@@ -10,7 +10,7 @@ package Myclass;
 public class Book extends DB_Element
 {
     // 인스턴스 변수 - 다음의 예제를 사용자에 맞게 변경하세요.
-    private int x;
+    private int y;
 
     /**
      * Book 클래스의 객체 생성자
@@ -18,7 +18,7 @@ public class Book extends DB_Element
     public Book()
     {
         // 인스턴스 변수 초기화
-        x = 0;
+        y = 0;
     }
 
     /**
