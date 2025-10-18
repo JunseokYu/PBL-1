@@ -1,13 +1,18 @@
 package DataBase;
-
-
+import java.utill.ArrayList;
+import java.utill.Iterator;
+import myClass.DB_Element;
 /**
  * LibDB 클래스의 설명을 작성하세요.
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author ()
+ * @version ()
  */
-public class LibDB
+public class LibDB<T extends DB_Element>
 {
-    hl140ijv sakl
+    private ArrayList<T>db;
+    
+    public LibDB(){
+    
+    }
 }
