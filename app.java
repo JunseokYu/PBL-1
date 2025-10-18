@@ -5,7 +5,7 @@
  * @author (2022320026 유준석, 2022320014 정재헌, 2022320018 이성민)
  * @version (2025.09.17)
  */
-public class app
+public class App
 {
     public static void main(String[] args){
         //1. LibraryManagementSystem 객체 생성
