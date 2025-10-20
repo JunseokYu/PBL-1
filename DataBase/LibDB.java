@@ -8,7 +8,7 @@ import java.util.*;
  * @version ()
  */
 public class LibDB<T> {
-    private ArrayList<T> db;
+    private ArrayList<T>db;
 
     public LibDB() {
         db = new ArrayList<>();

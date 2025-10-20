@@ -42,7 +42,7 @@ public class LibraryManagementSystem
      */
     public <T> void printDB(LibDB<T> db)
     {
-        db.printAllElements;
+        db.printAllElements();
     }
 
     /**
