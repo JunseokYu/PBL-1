@@ -30,9 +30,9 @@ public class App
         System.out.println();
 
         // 6. 대출 작업
-        lms.borrowBook("202332003", "B04");
-        lms.borrowBook("202532001", "B02");
-        lms.borrowBook("202432002", "B03");
+        lms.borrowBook("2023320003", "B04");
+        lms.borrowBook("2025320001", "B02");
+        lms.borrowBook("2024320002", "B03");
 
         // 7. 대출 현황 출력
         System.out.println("----- 책 목록 출력 -----");
