@@ -1,4 +1,4 @@
-package Myclass;
+package myClass;
 
 /**
  * Book클래스는 책 객체를 생성하는 클래스.
