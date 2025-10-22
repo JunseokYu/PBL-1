@@ -1,6 +1,7 @@
 import java.util.*;
 import java.io.*;
 import myClass.*;
+import DataBase.*;
 
 /**
  * LibraryManagementSystem 클래스의 설명을 작성하세요.
@@ -74,33 +75,32 @@ public class LibraryManagementSystem
     {
         try{
             Scanner scan = new Scanner(new FileReader(bookFile));
+            ArrayList<String> line = new ArrayList<String>();
             while(true){
-                String line = scan.nextLine();
-                StringTokenizer stz = new StringTokenizer(line, "/");
-                String[] bookIf = new String[stz.countTokens()];
-                
-                for(int i = 0; stz.hasMoreTokens(); i++){
-                    String tok = stz.nextToken();
-                    bookIf[i] = tok;
-                }
-                
-                Book bookObj = new Book(bookIf[0], bookIf[1], bookIf[2], bookIf[3], Integer.valueOf(bookIf[4]));
-                
-                if(line.length() == 0)
+                int i = 0;
+                line.add(scan.nextLine());
+                if(line.get(i).length() == 0)
                     break;
+                i++;
             }
+            
+            Iterator<String> it = line.iterator();
+            while(it.hasNext()){
+                int j = 0;
+                StringTokenizer stz = new StringTokenizer(line.get(j), "/");
+                Book bookObj = new Book(stz.nextToken(), stz.nextToken(), stz.nextToken(), stz.nextToken(), 
+                Integer.valueOf(stz.nextToken()));
+                j++;
+            }
+            scan.close();
         }
         catch(IOException e){
             System.out.println("입출력 오류");
         }
-        finally{
-            if(scan != null)
-                scan.close();
-            }
-        }
         bookDB.add(bookObj);
         return bookObj;
     }
+
 
      /**
      * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
