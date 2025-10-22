@@ -64,62 +64,62 @@ public class LibraryManagementSystem
         try {
             Scanner scan = new Scanner(new FileReader(bookFile));
             ArrayList<String> line = new ArrayList<String>();
-            while (true) {
+            while(scan.hasNext()) {
                 int i = 0;
                 line.add(scan.nextLine());
-                if (line.get(i).length() == 0)
-                    break;
                 i++;
+                System.out.println("SBD 1while문 4번");
             }
-
+            scan.close();
+            
             Iterator<String> it = line.iterator();
-            while (it.hasNext()) {
+            
+            while(it.hasNext()){
                 int j = 0;
                 StringTokenizer stz = new StringTokenizer(line.get(j), "/");
                 Book bookObj = new Book(
-                    stz.nextToken(), stz.nextToken(), stz.nextToken(), stz.nextToken(),
-                    Integer.valueOf(stz.nextToken())
-                );
+                    stz.nextToken(), 
+                    stz.nextToken(), 
+                    stz.nextToken(), 
+                    stz.nextToken(),
+                    Integer.valueOf(stz.nextToken()));
+                bookDB.addElement(bookObj);
+                System.out.println("SBD while문 4번");
                 j++;
             }
-            scan.close();
-        } catch (IOException e) {
+        } 
+        catch(IOException e) {
             System.out.println("입출력 오류");
         }
-        bookDB.add(bookObj);
-        return bookObj;
+        return bookDB;
     }
+
 
     /**
      * 사용자 데이터베이스 설정 메서드
      */
     public LibDB<User> setUserDB(String userFile)
     {
-        Scanner scan = new Scanner(System.in);
-        FileReader fout = null;
-        int c;
         try {
-            fout = new FileReader(userFile);
-            for (int i = 0; true; i++) {
-                String line = scan.nextLine();
-                StringTokenizer stz = new StringTokenizer(line, "/");
-                String[] userIf = new String[stz.countTokens()];
-
-                for (int i = 0; stz.hasMoreTokens(); i++) {
-                    String tok = stz.nextToken();
-                    userIf[i] = tok;
-                }
-
-                User userObj = new User(userIf[0], Integer.valueOf(userIf[1]));
-
-                if (line.length() == 0)
-                    break;
+            Scanner scan = new Scanner(new FileReader(userFile));
+            ArrayList<String> line = new ArrayList<String>();
+            for(int i = 0; scan.hasNext(); i++) {
+                line.add(scan.nextLine());
+                System.out.println("SUD for1문 3번");
             }
-            fout.close();
-        } catch (IOException e) {
+            scan.close();
+            
+            Iterator<String> it = line.iterator();
+            for(int j = 0; it.hasNext() == false; j++) {
+                StringTokenizer stz = new StringTokenizer(line.get(j), "/");
+                User userObj = new User(Integer.valueOf(stz.nextToken()), stz.nextToken());
+                userDB.addElement(userObj);
+                System.out.println("SUD for2문 3번");
+            }
+        } 
+        catch(IOException e) {
             System.out.println("입출력 오류");
         }
-        scan.close();
-        return userObj;
+        return userDB;
     }
 }

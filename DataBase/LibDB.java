@@ -22,7 +22,7 @@ public class LibDB<T> {
         Iterator<T> it = db.iterator();
         while (it.hasNext()) {
             T obj = it.next();
-            if(obj.toString().contains(s)){
+            if(obj.toString().equals(s)){
                 return obj;
             }
         }
