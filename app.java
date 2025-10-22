@@ -17,15 +17,17 @@ public class App
         LibDB<User> userDB = lms.setUserDB("C:\\Temp\\UserData2025.txt");
 
         // 3. 이용자 정보 출력
-        System.out.println("----- 이용자 정보 출력 -----");
+        System.out.println("----- 이용자 목록 출력 -----");
         lms.printDB(userDB);
 
         // 4. 책 정보 등록
         LibDB<Book> bookDB = lms.setBookDB("C:\\Temp\\BookData2025.txt");
 
         // 5. 책 정보 출력
-        System.out.println("----- 책 정보 출력 -----");
+        System.out.println();
+        System.out.println("----- 책 목록 출력 -----");
         lms.printDB(bookDB);
+        System.out.println();
 
         // 6. 대출 작업
         lms.borrowBook("202332003", "B04");
@@ -33,7 +35,8 @@ public class App
         lms.borrowBook("202432002", "B03");
 
         // 7. 대출 현황 출력
+        System.out.println("----- 책 목록 출력 -----");
         lms.printLoanList();
-
+        System.out.println("----------------------");
     }
 }

@@ -21,8 +21,8 @@ public class LibraryManagementSystem
      */
     public LibraryManagementSystem()
     {
-        this.bookDB = new LibDB<Book>();
-        this.userDB = new LibDB<User>();
+        this.bookDB = new LibDB<>();
+        this.userDB = new LibDB<>();
         this.loanDB = new HashMap<User, Book>();
     }
 
@@ -37,7 +37,7 @@ public class LibraryManagementSystem
     /**
      * DB 전체 출력 메서드
      */
-    public <T> void printDB(LibDB<T> db)
+    public <T extends DB_Element> void printDB(LibDB<T> db)
     {
         db.printAllElements();
     }
@@ -49,7 +49,7 @@ public class LibraryManagementSystem
     {
         Set<User> keys = loanDB.keySet();
         Iterator<User> it = keys.iterator();
-        while (it.hasNext()) {
+        while(it.hasNext()) {
             User userObj = it.next();
             Book bookObj = loanDB.get(userObj);
             System.out.println(userObj + " ===> " + bookObj);
@@ -65,18 +65,13 @@ public class LibraryManagementSystem
             Scanner scan = new Scanner(new FileReader(bookFile));
             ArrayList<String> line = new ArrayList<String>();
             while(scan.hasNext()) {
-                int i = 0;
                 line.add(scan.nextLine());
-                i++;
-                System.out.println("SBD 1while문 4번");
             }
             scan.close();
             
             Iterator<String> it = line.iterator();
-            
             while(it.hasNext()){
-                int j = 0;
-                StringTokenizer stz = new StringTokenizer(line.get(j), "/");
+                StringTokenizer stz = new StringTokenizer(it.next(), "/");
                 Book bookObj = new Book(
                     stz.nextToken(), 
                     stz.nextToken(), 
@@ -84,8 +79,6 @@ public class LibraryManagementSystem
                     stz.nextToken(),
                     Integer.valueOf(stz.nextToken()));
                 bookDB.addElement(bookObj);
-                System.out.println("SBD while문 4번");
-                j++;
             }
         } 
         catch(IOException e) {
@@ -102,20 +95,14 @@ public class LibraryManagementSystem
     {
         try {
             Scanner scan = new Scanner(new FileReader(userFile));
-            ArrayList<String> line = new ArrayList<String>();
             for(int i = 0; scan.hasNext(); i++) {
-                line.add(scan.nextLine());
-                System.out.println("SUD for1문 3번");
+                String line = scan.nextLine();
+                StringTokenizer stz = new StringTokenizer(line, "/");
+                User userObj = new User(Integer.valueOf(stz.nextToken()), stz.nextToken());
+                userDB.addElement(userObj);
             }
             scan.close();
             
-            Iterator<String> it = line.iterator();
-            for(int j = 0; it.hasNext() == false; j++) {
-                StringTokenizer stz = new StringTokenizer(line.get(j), "/");
-                User userObj = new User(Integer.valueOf(stz.nextToken()), stz.nextToken());
-                userDB.addElement(userObj);
-                System.out.println("SUD for2문 3번");
-            }
         } 
         catch(IOException e) {
             System.out.println("입출력 오류");

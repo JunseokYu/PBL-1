@@ -1,5 +1,6 @@
 package DataBase;
 import java.util.*;
+import myClass.*;
 
 /**
  * LibDB 클래스의 설명을 작성하세요.
@@ -7,7 +8,7 @@ import java.util.*;
  * @author ()
  * @version ()
  */
-public class LibDB<T> {
+public class LibDB<T extends DB_Element> {
     private ArrayList<T> db;
 
     public LibDB() {
@@ -22,7 +23,7 @@ public class LibDB<T> {
         Iterator<T> it = db.iterator();
         while (it.hasNext()) {
             T obj = it.next();
-            if(obj.toString().equals(s)){
+            if(obj.getID().equals(s)){
                 return obj;
             }
         }

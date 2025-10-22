@@ -35,6 +35,6 @@ public class Book extends DB_Element
      * 상위 클래스인 object 클래스에 오버라이딩하는 클래스. (문자열 반환)
      */
     public String toString(){
-        return "("+this.BookID+")  "+this.title+",  "+this.author+",  "+this.publisher+",  "+this.year;
+        return "("+this.BookID+") "+this.title+", "+this.author+", "+this.publisher+", "+this.year;
     }
 }

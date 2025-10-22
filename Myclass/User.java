@@ -26,7 +26,7 @@ public class User extends DB_Element
      * getID를 Wrapper클래스의 Integer형을 문자열로 반환하는 메소드
      */
     public String getID() {
-        return stID.toString();
+        return String.valueOf(stID);
     }
 
     /**
