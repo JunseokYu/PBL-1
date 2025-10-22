@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=LibDB
-comment0.text=\r\n\ LibDB\ \uD074\uB798\uC2A4\uC758\ \uC124\uBA85\uC744\ \uC791\uC131\uD558\uC138\uC694.\r\n\r\n\ @author\ ()\r\n\ @version\ ()\r\n
+comment0.text=\n\ LibDB\ \uD074\uB798\uC2A4\uC758\ \uC124\uBA85\uC744\ \uC791\uC131\uD558\uC138\uC694.\n\n\ @author\ ()\n\ @version\ ()\n
 comment1.params=
 comment1.target=LibDB()
 comment2.params=element
