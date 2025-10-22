@@ -8,7 +8,7 @@ import java.util.*;
  * @version ()
  */
 public class LibDB<T> {
-    private ArrayList<T>db;
+    private ArrayList<T> db;
 
     public LibDB() {
         db = new ArrayList<>();
@@ -22,7 +22,7 @@ public class LibDB<T> {
         Iterator<T> it = db.iterator();
         while (it.hasNext()) {
             T obj = it.next();
-            if(obj.toString().equals(s)){
+            if(obj.toString().contains(s)){
                 return obj;
             }
         }

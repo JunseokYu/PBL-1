@@ -1,7 +1,7 @@
 import java.util.*;
-import Myclass.*;
-import DataBase.*;
 import java.io.*;
+import myClass.*;
+import DataBase.*;
 
 /**
  * LibraryManagementSystem 클래스의 설명을 작성하세요.
@@ -27,10 +27,7 @@ public class LibraryManagementSystem
     }
 
     /**
-     * 예제 메소드 - 이 주석을 사용자에 맞게 바꾸십시오
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 더하기 y의 결과값을 반환
+     * 도서 대여 메서드
      */
     public void borrowBook(String userID, String bookID)
     {
@@ -38,99 +35,88 @@ public class LibraryManagementSystem
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * DB 전체 출력 메서드
      */
     public <T> void printDB(LibDB<T> db)
     {
-        db.printAllElements();
+        db.printAllElements();
     }
 
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * 대여 목록 출력 메서드
      */
     public void printLoanList()
     {
-        Set<User> Keys = loanDB.keySet();
-        Iterator<User> it = Keys.iterator();
-        while(it.hasNext()){
+        Set<User> keys = loanDB.keySet();
+        Iterator<User> it = keys.iterator();
+        while (it.hasNext()) {
             User userObj = it.next();
             Book bookObj = loanDB.get(userObj);
             System.out.println(userObj + " ===> " + bookObj);
         }
     }
+
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * 도서 데이터베이스 설정 메서드
      */
     public LibDB<Book> setBookDB(String bookFile)
     {
-        Scanner scan = new Scanner(System.in);
-        FileReader fout = null;
-        int c;
-        try{
-            fout = new FileReader(bookFile);
-            while(true){
-                String line = scan.nextLine();
-                StringTokenizer stz = new StringTokenizer(line, "/");
-                String[] bookIf = new String[stz.countTokens()];
-                
-                for(int i = 0; stz.hasMoreTokens(); i++){
-                    String tok = stz.nextToken();
-                    bookIf[i] = tok;
-                }
-                
-                Book bookObj = new Book(bookIf[0], bookIf[1], bookIf[2], bookIf[3], Integer.valueOf(bookIf[4]));
-                
-                if(line.length() == 0)
+        try {
+            Scanner scan = new Scanner(new FileReader(bookFile));
+            ArrayList<String> line = new ArrayList<String>();
+            while (true) {
+                int i = 0;
+                line.add(scan.nextLine());
+                if (line.get(i).length() == 0)
                     break;
+                i++;
             }
-            fout.close();
-        }
-        catch(IOException e){
+
+            Iterator<String> it = line.iterator();
+            while (it.hasNext()) {
+                int j = 0;
+                StringTokenizer stz = new StringTokenizer(line.get(j), "/");
+                Book bookObj = new Book(
+                    stz.nextToken(), stz.nextToken(), stz.nextToken(), stz.nextToken(),
+                    Integer.valueOf(stz.nextToken())
+                );
+                j++;
+            }
+            scan.close();
+        } catch (IOException e) {
             System.out.println("입출력 오류");
         }
-        scan.close();
-        return bookDB;
+        bookDB.add(bookObj);
+        return bookObj;
     }
+
     /**
-     * 메소드 예제 - 사용자에 맞게 주석을 바꾸십시오.
-     *
-     * @param  y  메소드의 샘플 파라미터
-     * @return    x 와 y의 합
+     * 사용자 데이터베이스 설정 메서드
      */
     public LibDB<User> setUserDB(String userFile)
     {
         Scanner scan = new Scanner(System.in);
         FileReader fout = null;
         int c;
-        try{
+        try {
             fout = new FileReader(userFile);
-            for(int i = 0; true; i++){
+            for (int i = 0; true; i++) {
                 String line = scan.nextLine();
                 StringTokenizer stz = new StringTokenizer(line, "/");
                 String[] userIf = new String[stz.countTokens()];
-                
-                for(int i = 0; stz.hasMoreTokens();i++){
+
+                for (int i = 0; stz.hasMoreTokens(); i++) {
                     String tok = stz.nextToken();
-                    userIf[j] = tok;
+                    userIf[i] = tok;
                 }
-                
+
                 User userObj = new User(userIf[0], Integer.valueOf(userIf[1]));
-                
-                if(line.length() == 0)
+
+                if (line.length() == 0)
                     break;
             }
             fout.close();
-        }
-        catch(IOException e){
+        } catch (IOException e) {
             System.out.println("입출력 오류");
         }
         scan.close();
