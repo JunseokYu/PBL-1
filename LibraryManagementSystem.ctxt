@@ -1,0 +1,22 @@
+#BlueJ class context
+comment0.target=LibraryManagementSystem
+comment0.text=\r\n\ LibraryManagementSystem\ \uD074\uB798\uC2A4\uC758\ \uC124\uBA85\uC744\ \uC791\uC131\uD558\uC138\uC694.\r\n\r\n\ @author\ (\uC791\uC131\uC790\ \uC774\uB984)\r\n\ @version\ (\uBC84\uC804\ \uBC88\uD638\ \uB610\uB294\ \uC791\uC131\uD55C\ \uB0A0\uC9DC)\r\n
+comment1.params=
+comment1.target=LibraryManagementSystem()
+comment1.text=\r\n\ LibraryManagementSystem\ \uD074\uB798\uC2A4\uC758\ \uAC1D\uCCB4\ \uC0DD\uC131\uC790\r\n
+comment2.params=userID\ bookID
+comment2.target=void\ borrowBook(java.lang.String,\ java.lang.String)
+comment2.text=\r\n\ \uB3C4\uC11C\ \uB300\uC5EC\ \uBA54\uC11C\uB4DC\r\n
+comment3.params=db
+comment3.target=void\ printDB(DataBase.LibDB)
+comment3.text=\r\n\ DB\ \uC804\uCCB4\ \uCD9C\uB825\ \uBA54\uC11C\uB4DC\r\n
+comment4.params=
+comment4.target=void\ printLoanList()
+comment4.text=\r\n\ \uB300\uC5EC\ \uBAA9\uB85D\ \uCD9C\uB825\ \uBA54\uC11C\uB4DC\r\n
+comment5.params=bookFile
+comment5.target=DataBase.LibDB\ setBookDB(java.lang.String)
+comment5.text=\r\n\ \uB3C4\uC11C\ \uB370\uC774\uD130\uBCA0\uC774\uC2A4\ \uC124\uC815\ \uBA54\uC11C\uB4DC\r\n
+comment6.params=userFile
+comment6.target=DataBase.LibDB\ setUserDB(java.lang.String)
+comment6.text=\r\n\ \uC0AC\uC6A9\uC790\ \uB370\uC774\uD130\uBCA0\uC774\uC2A4\ \uC124\uC815\ \uBA54\uC11C\uB4DC\r\n
+numComments=7
