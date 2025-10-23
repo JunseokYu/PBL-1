@@ -26,13 +26,16 @@ public class Book extends DB_Element
     }
 
     /**
-     * BookID를 리턴하는 메소드
+     * BookID를 리턴하는 메소드
      */
     public String getID(){
         return this.BookID;
     }
+
     /**
-     * 상위 클래스인 object 클래스에 오버라이딩하는 클래스. (문자열 반환)
+     * 상위 클래스인 object 클래스에 오버라이딩하는 클래스.
+     * 
+     * @return 문자열
      */
     public String toString(){
         return "("+this.BookID+") "+this.title+", "+this.author+", "+this.publisher+", "+this.year;

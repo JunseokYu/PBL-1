@@ -3,4 +3,5 @@ comment0.target=App
 comment0.text=\r\n\r\n\ App\ \uD074\uB798\uC2A4\uB294\ \uB77C\uC774\uBE0C\uB7EC\uB9AC\ \uC2DC\uC2A4\uD15C\uC744\ \uC2E4\uD589\uD558\uC5EC\ DB\ \uC815\uBCF4\uB97C\ \uCD9C\uB825\uD558\uB294\ \uBA54\uC778\ \uD074\uB798\uC2A4.\r\n\r\n\ @author\ (2022320026\ \uC720\uC900\uC11D,\ 2022320014\ \uC815\uC7AC\uD5CC,\ 2022320018\ \uC774\uC131\uBBFC)\r\n\ @version\ (2025.10.23)\r\n
 comment1.params=args
 comment1.target=void\ main(java.lang.String[])
+comment1.text=\r\n\ LibrayManagementSystem\ \uD074\uB798\uC2A4,\ myClass\ \uD328\uD0A4\uC9C0\uB97C\ \uCC38\uC870\uD558\uC5EC\ \uD30C\uC77C\uC5D0\ \uC788\uB294\ \uB370\uC774\uD130\uB97C\r\n\ \uBD88\uB7EC\ \uC774\uC6A9\uC790,\ \uCC45\ \uC815\uBCF4\uB97C\ \uB4F1\uB85D\ \uBC0F\ \uCD9C\uB825\uD558\uACE0\ \uB300\uCD9C\ \uC791\uC5C5\ \uBC0F\ \uD604\uD669\ \uCD9C\uB825\uC744\ \uD558\uB294\ \uBA54\uC18C\uB4DC\r\n\r\n
 numComments=2

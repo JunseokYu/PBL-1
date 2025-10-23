@@ -1,6 +1,7 @@
 #BlueJ class context
 comment0.target=DB_Element
-comment0.text=\r\n\ DB_Element\ \uD074\uB798\uC2A4\uC758\ \uC124\uBA85\uC744\ \uC791\uC131\uD558\uC138\uC694.\r\n\r\n\ @author\ (2022320026\ \uC720\uC900\uC11D,\ 2022320014\ \uC815\uC7AC\uD5CC,\ 2022320018\ \uC774\uC131\uBBFC)\r\n\ @version\ (2025.10.23)\r\n
+comment0.text=\r\n\ Book\ \uD074\uB798\uC2A4\uC640,\ User\ \uD074\uB798\uC2A4\uC758\ \uC0C1\uC704\ \uD074\uB798\uC2A4\uC774\uBA70,\ \uCD94\uC0C1\uD654\ getID()\ \uBA54\uC18C\uB4DC\uB97C\ \uC9C0\uB2CC\ \uCD94\uC0C1\uD654\ \uD074\uB798\uC2A4\ \r\n\r\n\ @author\ (2022320026\ \uC720\uC900\uC11D,\ 2022320014\ \uC815\uC7AC\uD5CC,\ 2022320018\ \uC774\uC131\uBBFC)\r\n\ @version\ (2025.10.23)\r\n
 comment1.params=
 comment1.target=java.lang.String\ getID()
+comment1.text=\r\n\ ID\uC758\ \uAC12\uC744\ \uBC18\uD658\uD558\uB294\ \uCD94\uC0C1\uBA54\uC18C\uB4DC\r\n\r\n\ @return\ String\ \uD0C0\uC785\uC758\ ID\r\n
 numComments=2

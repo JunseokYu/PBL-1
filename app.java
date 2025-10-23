@@ -9,7 +9,12 @@ import myClass.*;
  */
 public class App
 {
-        public static void main(String[] args){
+    /**
+     * LibrayManagementSystem 클래스, myClass 패키지를 참조하여 파일에 있는 데이터를
+     * 불러 이용자, 책 정보를 등록 및 출력하고 대출 작업 및 현황 출력을 하는 메소드
+     *
+     */
+    public static void main(String[] args){
         // 1. LibraryManagementSystem 객체 생성
         LibraryManagementSystem lms = new LibraryManagementSystem();
 

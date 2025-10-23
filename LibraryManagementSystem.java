@@ -4,7 +4,8 @@ import myClass.*;
 import DataBase.*;
 
 /**
- * LibraryManagementSystem 클래스의 설명을 작성하세요.
+ * bookDB, loanDB, userDB를 생성하고 대출 작업 / 각각의 데이터베이스 요소 출력
+ * / userDB, bookDB에 요소를 설정하는 메소드
  *
  * @author (2022320026 유준석, 2022320014 정재헌, 2022320018 이성민)
  * @version (2025.10.23)
@@ -27,7 +28,10 @@ public class LibraryManagementSystem
     }
 
     /**
-     * 도서 대여 메서드
+     * loanDB에 userID와 bookID를 가진 객체를 찾아 저장하는 메소드
+     *
+     * @param 찾고싶은 User 객체와 동일한 userID 파라미터
+     * @param 찾고싶은 Book 객체와 동일한 bookID 파라미터
      */
     public void borrowBook(String userID, String bookID)
     {
@@ -35,7 +39,9 @@ public class LibraryManagementSystem
     }
 
     /**
-     * DB 전체 출력 메서드
+     * userDB와 bookDB의 요소들을 출력하는 메소드
+     *
+     * @param 출력하고 싶은 LibDB<T> db 파라미터
      */
     public <T extends DB_Element> void printDB(LibDB<T> db)
     {
@@ -43,7 +49,8 @@ public class LibraryManagementSystem
     }
 
     /**
-     * 대여 목록 출력 메서드
+     * loanDB의 요소들을 출력하는 메소드
+     *
      */
     public void printLoanList()
     {
@@ -57,7 +64,11 @@ public class LibraryManagementSystem
     }
 
     /**
-     * 도서 데이터베이스 설정 메서드
+     * 파라미터로 받은 파일 경로를 스트림으로 한 줄씩 입력받아 토큰화 하여 BOOK객체를 생성하고 
+     * LibDB<Book>에 추가하고 반환하는 메소드
+     *
+     * @param 저장하고 싶은 책 정보 파일의 경로 값 bookFile 파라미터
+     * @return 저장된 LibDB<Book>
      */
     public LibDB<Book> setBookDB(String bookFile)
     {
@@ -68,16 +79,16 @@ public class LibraryManagementSystem
                 line.add(scan.nextLine());
             }
             scan.close();
-            
+
             Iterator<String> it = line.iterator();
             while(it.hasNext()){
                 StringTokenizer stz = new StringTokenizer(it.next(), "/");
                 Book bookObj = new Book(
-                    stz.nextToken(), 
-                    stz.nextToken(), 
-                    stz.nextToken(), 
-                    stz.nextToken(),
-                    Integer.valueOf(stz.nextToken()));
+                        stz.nextToken(), 
+                        stz.nextToken(), 
+                        stz.nextToken(), 
+                        stz.nextToken(),
+                        Integer.valueOf(stz.nextToken()));
                 bookDB.addElement(bookObj);
             }
         } 
@@ -87,9 +98,12 @@ public class LibraryManagementSystem
         return bookDB;
     }
 
-
     /**
-     * 사용자 데이터베이스 설정 메서드
+     * 파라미터로 받은 파일 경로를 스트림으로 한 줄씩 입력받아 토큰화 하여 User객체를 생성하고 
+     * LibDB<User>에 추가하여 반환하는 메소드
+     *
+     * @param 저장하고 싶은 책 정보 파일의 경로 값 userFile 파라미터
+     * @return 저장된 LibDB<User>
      */
     public LibDB<User> setUserDB(String userFile)
     {

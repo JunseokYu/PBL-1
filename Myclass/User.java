@@ -1,7 +1,7 @@
 package myClass;
 
 /**
- * User클래스는 이용자 객체를 생성하는 클래스.
+ * 이용자 객체를 생성하는 클래스.
  *
  * @author (2022320026 유준석, 2022320014 정재헌, 2022320018 이성민)
  * @version (2025.10.23)
@@ -23,14 +23,16 @@ public class User extends DB_Element
     }
 
     /**
-     * getID를 Wrapper클래스의 Integer형을 문자열로 반환하는 메소드
+     * getID를 Wrapper클래스의 Integer 타입을 String 타입으로 형변환하여 반환하는 메소드
      */
     public String getID() {
         return String.valueOf(stID);
     }
 
     /**
-     * 상위 클래스인 Object 클래스의 toString 메서드를 오버라이딩 (문자열 반환)
+     * 상위 클래스인 Object 클래스의 toString 메서드를 오버라이딩
+     * 
+     * @return 문자열
      */
     public String toString() {
         return "[" + stID + "] " + name;
