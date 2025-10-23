@@ -5,11 +5,11 @@ import myClass.*;
  * App 클래스는 라이브러리 시스템을 실행하여 DB 정보를 출력하는 메인 클래스.
  *
  * @author (2022320026 유준석, 2022320014 정재헌, 2022320018 이성민)
- * @version (2025.09.)
+ * @version (2025.10.23)
  */
 public class App
 {
-    public static void main(String[] args){
+        public static void main(String[] args){
         // 1. LibraryManagementSystem 객체 생성
         LibraryManagementSystem lms = new LibraryManagementSystem();
 

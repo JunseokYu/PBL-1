@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=DB_Element
-comment0.text=\r\n\ DB_Element\ \uD074\uB798\uC2A4\uC758\ \uC124\uBA85\uC744\ \uC791\uC131\uD558\uC138\uC694.\r\n\r\n\ @author\ (2022320026\u0008\ \uC720\uC900\uC11D,\ 2022320014\ \uC815\uC7AC\uD5CC,\ 2022320018\ \u0008\uC774\uC131\uBBFC)\r\n\ @version\ (2025.09.17)\r\n
+comment0.text=\r\n\ DB_Element\ \uD074\uB798\uC2A4\uC758\ \uC124\uBA85\uC744\ \uC791\uC131\uD558\uC138\uC694.\r\n\r\n\ @author\ (2022320026\ \uC720\uC900\uC11D,\ 2022320014\ \uC815\uC7AC\uD5CC,\ 2022320018\ \uC774\uC131\uBBFC)\r\n\ @version\ (2025.10.23)\r\n
 comment1.params=
 comment1.target=java.lang.String\ getID()
 numComments=2

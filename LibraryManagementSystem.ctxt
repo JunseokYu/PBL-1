@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=LibraryManagementSystem
-comment0.text=\r\n\ LibraryManagementSystem\ \uD074\uB798\uC2A4\uC758\ \uC124\uBA85\uC744\ \uC791\uC131\uD558\uC138\uC694.\r\n\r\n\ @author\ (\uC791\uC131\uC790\ \uC774\uB984)\r\n\ @version\ (\uBC84\uC804\ \uBC88\uD638\ \uB610\uB294\ \uC791\uC131\uD55C\ \uB0A0\uC9DC)\r\n
+comment0.text=\r\n\ LibraryManagementSystem\ \uD074\uB798\uC2A4\uC758\ \uC124\uBA85\uC744\ \uC791\uC131\uD558\uC138\uC694.\r\n\r\n\ @author\ (2022320026\ \uC720\uC900\uC11D,\ 2022320014\ \uC815\uC7AC\uD5CC,\ 2022320018\ \uC774\uC131\uBBFC)\r\n\ @version\ (2025.10.23)\r\n
 comment1.params=
 comment1.target=LibraryManagementSystem()
 comment1.text=\r\n\ LibraryManagementSystem\ \uD074\uB798\uC2A4\uC758\ \uAC1D\uCCB4\ \uC0DD\uC131\uC790\r\n

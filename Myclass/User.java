@@ -4,7 +4,7 @@ package myClass;
  * User클래스는 이용자 객체를 생성하는 클래스.
  *
  * @author (2022320026 유준석, 2022320014 정재헌, 2022320018 이성민)
- * @version (2025.09.17)
+ * @version (2025.10.23)
  */
 public class User extends DB_Element
 {

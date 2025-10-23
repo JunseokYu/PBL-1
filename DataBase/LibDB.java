@@ -3,10 +3,10 @@ import java.util.*;
 import myClass.*;
 
 /**
- * LibDB 클래스의 설명을 작성하세요.
+ * userDB와 bookDB를 생성하는 제네릭한 메소드
  *
- * @author ()
- * @version ()
+ * @author (2022320026 유준석, 2022320014 정재헌, 2022320018 이성민)
+ * @version (2025.10.23)
  */
 public class LibDB<T extends DB_Element> {
     private ArrayList<T> db;

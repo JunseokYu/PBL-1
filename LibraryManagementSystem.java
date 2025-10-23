@@ -6,8 +6,8 @@ import DataBase.*;
 /**
  * LibraryManagementSystem 클래스의 설명을 작성하세요.
  *
- * @author (작성자 이름)
- * @version (버전 번호 또는 작성한 날짜)
+ * @author (2022320026 유준석, 2022320014 정재헌, 2022320018 이성민)
+ * @version (2025.10.23)
  */
 public class LibraryManagementSystem
 {
@@ -81,8 +81,8 @@ public class LibraryManagementSystem
                 bookDB.addElement(bookObj);
             }
         } 
-        catch(IOException e) {
-            System.out.println("입출력 오류");
+        catch(IOException e){
+            System.out.println("파일 입력에 오류가 발생했습니다.");
         }
         return bookDB;
     }
@@ -95,17 +95,16 @@ public class LibraryManagementSystem
     {
         try {
             Scanner scan = new Scanner(new FileReader(userFile));
-            for(int i = 0; scan.hasNext(); i++) {
+            for(; scan.hasNext();) {
                 String line = scan.nextLine();
                 StringTokenizer stz = new StringTokenizer(line, "/");
                 User userObj = new User(Integer.valueOf(stz.nextToken()), stz.nextToken());
                 userDB.addElement(userObj);
             }
             scan.close();
-            
         } 
-        catch(IOException e) {
-            System.out.println("입출력 오류");
+        catch(IOException e){
+            System.out.println("파일 입력에 오류가 발생했습니다.");
         }
         return userDB;
     }
